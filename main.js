@@ -119,8 +119,8 @@ function timer(){
         wm.innerText = lastValue;
         ws.innerText = '00';
 
-        bm.innerText = 0;
-        bs.innerText = '05';
+        bm.innerText = 5;
+        bs.innerText = '00';
         option = false;
 
         document.getElementById('counter').innerText++;
