@@ -45,6 +45,9 @@ function timer(){
         ws.innerText = 59;
         wm.innerText--;
     }
+    if(ws == 0 && wm == 0 && bm != 0 && bs != 0){
+        document.getElementById('sound').play();
+    }
     // Contagem regressiva do parar
     if(wm.innerText == 0 && ws.innerText == 0){
         if(bs.innerText != 0){
