@@ -10,7 +10,7 @@
 <body>
     <h1>Método pomodoro</h1>
 
-    <audio id="sound" src="alarm.mp3" style="display: none;"></audio>
+    <audio id="sound" src="alarm1.mp3" style="display: none;"></audio>
     <div id="container">
         <p id="work" class="label">Trabalho:</p><p id="break" class="label">Intervalo:</p><p id="cycles" class="label">Ciclos:</p>
         <!--Work Timer-->
@@ -23,13 +23,14 @@
 
         <!--Break Timer-->
         <div id="break-timer" class="timer">
-            <p id="b_minutes">5</p><p class="semicolon">:</p><p id="b_seconds">00</p>
+            <p id="b_minutes">0</p><p class="semicolon">:</p><p id="b_seconds">5</p>
         </div>
-        <button id="add" class="btn">Adicionar</button>
+        <button id="remove" class="btn">Retirar</button>
         <button id="start" class="btn">Começar</button>
         <button id="stop" class="btn">Pausar</button>
         <button id="reset" class="btn">Recomeçar</button>
-        <button id="remove" class="btn">Retirar</button>
+        <button id="add" class="btn">Adicionar</button>
+        
     </div>
 
     <script src="main.js"></script>
