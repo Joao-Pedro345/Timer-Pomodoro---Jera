@@ -8,6 +8,21 @@ var ws = document.getElementById('w_seconds');
 var bm = document.getElementById('b_minutes');
 var bs = document.getElementById('b_seconds');
 
+var addButton = document.getElementById('add');
+var removeButton = document.getElementById('remove');
+
+addButton.addEventListener('click',function(){
+    wm.innerHTML++;
+});
+
+removeButton.addEventListener('click',function(){
+    if(wm !== 1){
+    wm.innerHTML--;
+}
+});
+
+var sound = false;
+
 var startTimer;
 
 start.addEventListener('click', function(){
@@ -18,7 +33,7 @@ start.addEventListener('click', function(){
     }
 });
 
-reset.addEventListener('click',function(){
+reset.addEventListener('click',function (){
     wm.innerText = 25;
     ws.innerText = '00';
 
@@ -45,11 +60,11 @@ function timer(){
         ws.innerText = 59;
         wm.innerText--;
     }
-    if(ws == 0 && wm == 0 && bm != 0 && bs != 0){
-        document.getElementById('sound').play();
-    }
+    
     // Contagem regressiva do parar
     if(wm.innerText == 0 && ws.innerText == 0){
+        document.getElementById('sound').play();
+
         if(bs.innerText != 0){
             bs.innerText--;
         }else if (bm.innerText != 0 && bs.innerText == 0){
